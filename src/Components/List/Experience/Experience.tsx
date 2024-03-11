@@ -15,7 +15,7 @@ export const Experience = () => {
             />
             <Link
               to="https://isidoreagric.co/"
-              target="_blank"
+              rel="noopener"
               className={styles.company_of_experience_link}
             >
               ISIDORE AGRICTECH LIMITED
@@ -65,7 +65,7 @@ export const Experience = () => {
             />
             <Link
               to="https://kadickintegrated.com/"
-              target="_blank"
+              rel="noopener"
               className={styles.company_of_experience_link}
             >
               KADICK INTERGRATED LIMITED
@@ -112,7 +112,7 @@ export const Experience = () => {
             />
             <Link
               to="https://decagonhq.com/"
-              target="_blank"
+              rel="noopener"
               className={styles.company_of_experience_link}
             >
               DECAGON INSTITUTION
