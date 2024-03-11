@@ -1,0 +1,91 @@
+.sider_parent {
+  /* overflow: auto; */
+  overflow-x: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgb(0, 21, 42);
+}
+
+@media only screen and (max-width: 912px) {
+  .sider_parent {
+    display: none;
+  }
+}
+
+.title {
+  height: 150px;
+  width: 100%;
+  color: rgb(240, 136, 6);
+  background-color: rgb(0, 21, 42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  font-size: 16px;
+  border: solid 0.5px rgb(221, 221, 221) !important;
+  border-top: 0px !important;
+  border-left: 0px !important;
+  border-right: 0px !important;
+}
+
+#profession {
+  font-size: 14px;
+  color: rgb(125, 90, 78);
+  font-weight: 400;
+}
+
+.list_link {
+  font-size: 15px;
+  font-weight: 300;
+  /* border: solid 1px; */
+  /* margin-right: 20px; */
+}
+
+.person_icon {
+  font-size: 30px !important;
+  color: rgb(240, 136, 6) !important;
+}
+
+.experience_icon {
+  font-size: 30px !important;
+  color: rgb(5, 188, 212) !important;
+}
+
+.project_icon {
+  font-size: 30px !important;
+  color: rgb(63, 81, 181) !important;
+}
+
+.skill_icon {
+  font-size: 30px !important;
+  color: rgb(157, 39, 176) !important;
+}
+
+.education_icon {
+  font-size: 30px !important;
+  color: rgb(0, 128, 115) !important;
+}
+
+.interest_icon {
+  font-size: 30px !important;
+  color: #f44436 !important;
+}
+
+.contact_icon {
+  font-size: 30px !important;
+  color: rgb(121, 85, 72) !important;
+}
+
+.resume_icon {
+  font-size: 30px !important;
+  color: rgb(251, 192, 44) !important;
+}
+
+.items {
+  border-radius: 0px !important;
+  border: solid 1px;
+}

@@ -1,0 +1,122 @@
+/* Header */
+.responsive_nav_parent {
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  margin-right: 95px;
+}
+
+.title {
+  color: rgb(240, 136, 6);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.title_occupation {
+  font-size: 13px;
+  margin-left: 30px;
+  color: rgb(125, 90, 78);
+}
+
+@media only screen and (min-width: 913px) {
+  .responsive_nav_parent {
+    display: none !important;
+  }
+}
+
+/* Drawer */
+.drawer_btn {
+  background-color: white;
+  border: solid 1px white !important;
+  box-shadow: none !important;
+}
+
+.drawer_icon {
+  color: rgb(240, 136, 6);
+  font-size: 30px;
+}
+
+.drawer {
+  width: 50% !important;
+  background-color: rgb(0, 21, 42) !important;
+  box-shadow: none !important;
+}
+
+.drawer_text_link {
+  font-size: 13px;
+  font-weight: 300;
+  color: #a6adb5;
+  font-weight: 500;
+}
+
+.person_icon_drawer {
+  font-size: 25px !important;
+  color: rgb(240, 136, 6) !important;
+  margin-top: 5px !important;
+  margin: -7px;
+  margin-right: 20px;
+}
+
+.experience_icon {
+  font-size: 25px !important;
+  color: rgb(5, 188, 212) !important;
+  margin-top: 25px !important;
+  margin: -7px;
+  margin-right: 20px;
+}
+
+.project_icon {
+  font-size: 25px !important;
+  color: rgb(63, 81, 181) !important;
+  margin-top: 25px !important;
+  margin: -7px;
+  margin-right: 20px;
+}
+
+.skill_icon {
+  font-size: 25px !important;
+  color: rgb(157, 39, 176) !important;
+  margin-top: 25px !important;
+  margin: -7px;
+  margin-right: 20px;
+}
+
+.education_icon {
+  font-size: 25px !important;
+  color: rgb(0, 128, 115) !important;
+  margin-top: 25px !important;
+  margin: -7px;
+  margin-right: 20px;
+}
+
+.interest_icon {
+  font-size: 25px !important;
+  color: #f44436 !important;
+  margin-top: 25px !important;
+  margin: -7px;
+  margin-right: 20px;
+}
+
+.contact_icon {
+  font-size: 25px !important;
+  color: rgb(121, 85, 72) !important;
+  margin-top: 25px !important;
+  margin: -7px;
+  margin-right: 20px;
+}
+
+.resume_icon {
+  font-size: 25px !important;
+  color: rgb(251, 192, 44) !important;
+  margin-top: 25px !important;
+  margin: -7px;
+  margin-right: 20px;
+}
