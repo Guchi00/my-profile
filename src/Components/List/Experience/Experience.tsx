@@ -9,7 +9,10 @@ export const Experience = () => {
         <div className={styles.title_experience}>EXPERIENCE</div>
         <div className={styles.cards}>
           <div className={styles.cards_header}>
-            <img src="https://media.licdn.com/dms/image/C4D0BAQG4GmePqcnGGQ/company-logo_100_100/0/1657375523893?e=1716422400&v=beta&t=yD0SSSOe-TQOjzjxbronvMFIPUFQYGVcbqWck2LIfRY" />
+            <img
+              src="https://media.licdn.com/dms/image/C4D0BAQG4GmePqcnGGQ/company-logo_100_100/0/1657375523893?e=1716422400&v=beta&t=yD0SSSOe-TQOjzjxbronvMFIPUFQYGVcbqWck2LIfRY"
+              alt="company_logo"
+            />
             <Link
               to="https://isidoreagric.co/"
               target="_blank"
@@ -56,7 +59,10 @@ export const Experience = () => {
 
         <div className={styles.cards}>
           <div className={styles.cards_header}>
-            <img src="https://media.licdn.com/dms/image/C4D0BAQFchp0dotqSmA/company-logo_200_200/0/1630556643863/kadick_integrated_limited_logo?e=1716422400&v=beta&t=juO-2sdgkJPqm7U3sCyojz-5XAUZKLS0cxUDENHSmG0" />
+            <img
+              src="https://media.licdn.com/dms/image/C4D0BAQFchp0dotqSmA/company-logo_200_200/0/1630556643863/kadick_integrated_limited_logo?e=1716422400&v=beta&t=juO-2sdgkJPqm7U3sCyojz-5XAUZKLS0cxUDENHSmG0"
+              alt="company_logo"
+            />
             <Link
               to="https://kadickintegrated.com/"
               target="_blank"
@@ -100,7 +106,10 @@ export const Experience = () => {
 
         <div className={styles.last_card}>
           <div className={styles.cards_header}>
-            <img src="https://media.licdn.com/dms/image/C4D0BAQF_9_QNa8xobQ/company-logo_200_200/0/1630470807476/decagon_logo?e=1716422400&v=beta&t=a-jsUi7SGYkrhUYnLj6PA_u1cEBVjOa1D6ZAGBJhfmA" />
+            <img
+              src="https://media.licdn.com/dms/image/C4D0BAQF_9_QNa8xobQ/company-logo_200_200/0/1630470807476/decagon_logo?e=1716422400&v=beta&t=a-jsUi7SGYkrhUYnLj6PA_u1cEBVjOa1D6ZAGBJhfmA"
+              alt="company_logo"
+            />
             <Link
               to="https://decagonhq.com/"
               target="_blank"

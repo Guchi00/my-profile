@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 // import { Link, Events, scrollSpy } from "react-scroll";
-import type { DrawerProps, RadioChangeEvent } from "antd";
-import { Button, Drawer, Radio, Space } from "antd";
+import type { DrawerProps } from "antd";
+import { Button, Drawer, Space } from "antd";
 import PersonIcon from "@mui/icons-material/Person";
 import MovingIcon from "@mui/icons-material/Moving";
 import DeveloperBoardIcon from "@mui/icons-material/DeveloperBoard";
@@ -15,7 +15,7 @@ import styles from "./styles.module.css";
 
 export const ResponsiveDrawer: React.FC = () => {
   const [open, setOpen] = useState(false);
-  const [placement, setPlacement] = useState<DrawerProps["placement"]>("left");
+  const [placement] = useState<DrawerProps["placement"]>("left");
 
   const showDrawer = () => {
     setOpen(true);
@@ -97,7 +97,7 @@ export const ResponsiveDrawer: React.FC = () => {
           <FileCopyIcon className={styles.resume_icon} />
           <a
             href="https://www.canva.com/design/DAFtNLRdW8g/RUGm-vOvx6jdMIuaqbmjNw/edit?utm_content=DAFtNLRdW8g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-            target="_blank"
+            rel="noopener"
             className={styles.drawer_text_link}
           >
             Resume

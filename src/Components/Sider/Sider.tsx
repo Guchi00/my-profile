@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import type { MenuProps } from "antd";
-import { Layout, Menu, theme } from "antd";
+import { Layout, Menu } from "antd";
 // import { Link } from "react-router-dom";
 import { Link, Events, scrollSpy } from "react-scroll";
 import PersonIcon from "@mui/icons-material/Person";
@@ -16,16 +16,11 @@ import styles from "./styles.module.css";
 const { Sider } = Layout;
 
 export const SiderMenu: React.FC = () => {
-  const [activeLink, setActiveLink] = useState("1");
-  const linksRef = useRef<HTMLElement[]>([]);
-  const {
-    token: { colorBgContainer, borderRadiusLG },
-  } = theme.useToken();
+  // const [activeLink, setActiveLink] = useState("1");
 
-  const handleSetActive = (key: number) => {
-    console.log(key, "active");
-    // setActiveLink(key.toString());
-  };
+  // const {
+  //   token: { colorBgContainer, borderRadiusLG },
+  // } = theme.useToken();
 
   const handleSetInactive = (key: number) => {
     console.log(key, "in active");
@@ -152,7 +147,7 @@ export const SiderMenu: React.FC = () => {
       label: (
         <a
           href="https://www.canva.com/design/DAFtNLRdW8g/RUGm-vOvx6jdMIuaqbmjNw/edit?utm_content=DAFtNLRdW8g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-          target="_blank"
+          rel="noopener"
           className={styles.list_link}
         >
           Resume
@@ -184,7 +179,6 @@ export const SiderMenu: React.FC = () => {
 
   return (
     <Sider className={styles.sider_parent}>
-      {/* <div className="demo-logo-vertical" /> */}
       <Link
         to="home"
         className={styles.title}

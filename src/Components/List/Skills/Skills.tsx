@@ -4,7 +4,6 @@ import { ChildrenSkillsHTML } from "./ChildrenSkillsHTML";
 import { ChildrenSkillsCSS } from "./ChildrenSkillsCSS";
 import { ChildrenSkillsJavascript } from "./ChildrenSkillsJavascript";
 import { ChildrenSkillsOthers } from "./ChildrenSkillsOthers";
-import { data } from "./ChildrenSkillsHTML";
 
 export const Skills = () => {
   return (

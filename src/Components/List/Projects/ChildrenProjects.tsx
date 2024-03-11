@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
 export interface ProjectsProps {
@@ -13,7 +12,7 @@ export const ChildrenProjects = (props: ProjectsProps) => {
   return (
     <>
       <div className={styles.card}>
-        <a href={link} target="_blank" className={styles.img_container}>
+        <a href={link} rel="noopener" className={styles.img_container}>
           {props.image}
         </a>
         <div className={styles.cards_texts}>
