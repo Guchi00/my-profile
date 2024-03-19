@@ -13,10 +13,6 @@ export const data = [
     subtitle: "CSS3",
   },
   {
-    imageUrl: "https://andrewborstein.com/assets/img/sass.png",
-    subtitle: "SASS",
-  },
-  {
     imageUrl:
       "https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3.us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F78474159-d621-481f-9d6f-37ef2b31b3db%2Ficon-styled-component.jpg%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Content-Sha256%3DUNSIGNED-PAYLOAD%26X-Amz-Credential%3DAKIAT73L2G45EIPT3X45%252F20211122%252Fus-west-2%252Fs3%252Faws4_request%26X-Amz-Date%3D20211122T035512Z%26X-Amz-Expires%3D86400%26X-Amz-Signature%3D67adc84daceb082c61c0d31679f5887595ab1c644e32766984560f47ed842230%26X-Amz-SignedHeaders%3Dhost%26response-content-disposition%3Dfilename%2520%253D%2522icon-styled-component.jpg%2522%26x-id%3DGetObject&blockId=8d673ffd-9d07-45ac-bd13-cc5ee43e3c0e&width=256",
     subtitle: "Styled Component",

@@ -8,6 +8,10 @@ export interface SkillsProps {
 }
 export const data = [
   {
+    imageUrl: "https://andrewborstein.com/assets/img/haml.png",
+    subtitle: "HTML",
+  },
+  {
     title: "HTML",
     imageUrl: "https://andrewborstein.com/assets/img/html5.png",
     subtitle: "HTML5",
@@ -15,19 +19,6 @@ export const data = [
   {
     imageUrl: "https://andrewborstein.com/assets/img/react.png",
     subtitle: "JSX",
-  },
-  {
-    imageUrl: "https://andrewborstein.com/assets/img/haml.png",
-    subtitle: "Haml",
-  },
-
-  {
-    imageUrl: "https://andrewborstein.com/assets/img/jade.png",
-    subtitle: "Jade",
-  },
-  {
-    imageUrl: "https://andrewborstein.com/assets/img/jekyll.png",
-    subtitle: "Jekyll",
   },
 ];
 

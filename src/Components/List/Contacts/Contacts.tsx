@@ -60,7 +60,10 @@ export const Contacts = () => {
               <InstagramIcon className={styles.icon} />
             </Button>
           </Popover>
-          <Link to="" className={styles.action_link}>
+          <Link
+            to="https://www.instagram.com/ugochicodes?igsh=cHdsa3l5b2kzMG5q&utm_source=qr"
+            className={styles.action_link}
+          >
             ugochicodes
           </Link>
         </div>

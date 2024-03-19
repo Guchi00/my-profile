@@ -17,16 +17,16 @@ export const AboutMe = () => {
           <p>
             I’ve always sought out opportunities and challenges that are
             meaningful to me. Although my career path has taken many twists and
-            turns — from studying mass communication, to being a small business
+            turns — from studying mass communication to being a small business
             owner and entrepreneur, to a customer representative at a retail
             store — I've never stopped engaging my passion to help others and
             solve problems.
             <br></br>
             <br></br>
             As a web developer, I enjoy using my obsessive attention to detail,
-            my unequivocal love for making things, and my mission-driven work
-            ethic to literally change the world. That's why I’m excited to make
-            a big impact at a high growth company.
+            unequivocal love for making things, and mission-driven work ethic to
+            change the world. That's why I’m excited to make a big impact at a
+            high-growth company.
             <br></br>
             <br></br>
             In my professional journey, I had the privilege of contributing to
@@ -39,13 +39,17 @@ export const AboutMe = () => {
             <br></br>I was also part of the team that built "Appoga.com". A web
             enterprise application solution for providing top-notch IT services
             to users. Technologies used are Typescript, Reactjs, Nodejs,
-            Express, and MongoDB. Currently, I serve as a Frontend Developer at
-            Isidore Agrictech Limited. In this role, I am actively involved in
-            developing the company's admin website and overseeing various web
-            applications. My responsibilities include maintenance, feature
-            additions, and ensuring optimal responsiveness across all screens.
-            The technologies at the core of my work include Typescript, Next.js,
-            GraphQL/Urql, and CSS.
+            Express, and MongoDB.
+            <br></br>
+            <br></br>I am seeking to utilize my skills to thrive as an
+            entry-level software engineer while delivering value and
+            contributing to business growth. In my immediate previous role, I
+            serve as a junior frontend developer, actively developing the
+            company's admin website and overseeing various web applications. My
+            responsibilities include maintenance, feature adding, and ensuring
+            optimal responsiveness across all screens. The technologies at the
+            core of my work include React, Typescript, Next.ts, GraphQL/Urql,
+            and CSS3.
             <br></br>
             <br></br>I am excited about the ever-evolving landscape of web
             development and look forward to contributing my skills and passion
@@ -55,13 +59,13 @@ export const AboutMe = () => {
         <div className={styles.current_focus}>
           <span className={styles.focus}>Current Focus:</span>
           <Link to="" className={styles.link_current_focus}>
-            Accessibility //
+            Design Principles //
           </Link>{" "}
           <Link to="" className={styles.link_current_focus}>
             React //
           </Link>
           <Link to="" className={styles.link_current_focus}>
-            Design System
+            System Design
           </Link>
         </div>
       </div>

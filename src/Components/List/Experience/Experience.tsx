@@ -21,9 +21,7 @@ export const Experience = () => {
               ISIDORE AGRICTECH LIMITED
             </Link>
 
-            <span className={styles.job_title}>
-              Principle Frontend Developer
-            </span>
+            <span className={styles.job_title}>Junior Frontend Developer</span>
           </div>
 
           <div className={styles.cards_contents}>
@@ -34,9 +32,13 @@ export const Experience = () => {
             </p>
             <ul>
               <li>
-                Focused on front-end development and integrating Upserve's
-                best-in-class insights product into Isidore's flagship
-                all-in-one cloud-based POS system.
+                Responsible for converting Figma design to reusable components
+                using React and Next.js, and integrating their components with
+                Rest and GraphQL endpoints
+              </li>
+              <li>
+                Responsible for building web application features with backend
+                services
               </li>
               <li>
                 Provided valuable inputs and feedback to create intuitive and
@@ -49,6 +51,10 @@ export const Experience = () => {
               <li>
                 Collaborated effectively with a UI/UX designer to implement new
                 features
+              </li>
+              <li>
+                Developed and deployed existing web applications and ensure
+                their functionalities and responsiveness.
               </li>
             </ul>
           </div>
@@ -90,8 +96,7 @@ export const Experience = () => {
                 and implementation
               </li>
               <li>
-                Collaborated with the backend team on API design and
-                documentation.
+                Collaborated with team mate on API design and documentation.
               </li>
               <li>
                 Engaged actively with product managers for project planning and
@@ -130,7 +135,7 @@ export const Experience = () => {
             <ul>
               <li>
                 Responsible for designing and implementing frontend components
-                which interacted with RESTful APIs.
+                that interacted with RESTful APIs.
               </li>
               <li>
                 Joined a team of developers to build web applications according

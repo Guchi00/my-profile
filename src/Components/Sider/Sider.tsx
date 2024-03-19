@@ -113,16 +113,13 @@ export const SiderMenu: React.FC = () => {
       key: 6,
       icon: <InterestsIcon className={styles.interest_icon} />,
       label: (
-        <Link
-          to={"interest"}
+        <a
+          href={"https://www.savethechildren.net/"}
+          rel="noopener"
           className={styles.list_link}
-          spy={true}
-          smooth={true}
-          activeClass="active_menu_link"
-          hashSpy={true}
         >
           Interest
-        </Link>
+        </a>
       ),
     },
     {

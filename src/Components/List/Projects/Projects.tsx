@@ -5,7 +5,7 @@ const data = [
   {
     imageUrl:
       "https://unblast.com/wp-content/uploads/2019/12/eCommerce-Mobile-App-Template-1.jpg",
-    title: "Amazify-Amazon Clone",
+    title: "Amazon-Clone",
     description:
       "Amazify brings the familiar shopping experience of Amazon to your fingertips. With a wide range of products, intuitive interface, and seamless checkout process.",
     link: "https://e-commercesiteamazoneclone.netlify.app/",
@@ -13,7 +13,7 @@ const data = [
   {
     imageUrl:
       "https://s3-alpha.figma.com/hub/file/5146522907/d4c107c7-e837-44e9-90b0-5b39c0746e43-cover.png",
-    title: "Wallet Web UI",
+    title: "Wallent Web UI",
     description: "A wallet web app",
     link: "/",
   },
@@ -28,7 +28,7 @@ const data = [
     imageUrl:
       "https://st4.depositphotos.com/24409500/25635/i/450/depositphotos_256359544-stock-photo-saint-petersburg-russia-april-6.jpg",
     title: "Star Wars",
-    description: "A movie character and their individual discription",
+    description: "Movie characters and with their individual discription",
     link: "/",
   },
   {
@@ -43,7 +43,7 @@ const data = [
     imageUrl:
       "https://assets-global.website-files.com/5e38f1a8e654dab96f303972/624ef2cb8f89985d78076a56_Portada.png",
     title: "Chat box",
-    description: "An interactive app",
+    description: "A chatting app",
     link: "/",
   },
 ];
