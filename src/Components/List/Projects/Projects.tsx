@@ -1,69 +1,154 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
-import { ChildrenProjects } from "./ChildrenProjects";
-const data = [
+import { Card } from "./Card";
+import FadeInText from "../../FadeInText";
+
+export type Project = {
+  title: string;
+  imageUrl: string;
+  link: string;
+  category: string;
+  isReady: boolean;
+};
+
+const data: Project[] = [
   {
     imageUrl:
       "https://unblast.com/wp-content/uploads/2019/12/eCommerce-Mobile-App-Template-1.jpg",
     title: "Amazon-Clone",
-    description:
-      "Bring the familiar Amazon shopping experience to your fingertips with a wide range of products, an intuitive interface, and a seamless checkout process.",
     link: "https://e-commercesiteamazoneclone.netlify.app/",
+    category: "E-commerce",
+    isReady: true,
   },
   {
     imageUrl:
-      "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/d07c1db617a36898b5e8c71013d228d11003eb36d7150b7abfe988fe097c7d66.png",
+      "https://media.istockphoto.com/id/1272981812/photo/excited-young-asian-woman-lying-on-the-bed-in-the-bedroom-playing-mobile-game-on-smartphone.jpg?s=170667a&w=0&k=20&c=dK39BD_W6aqKp0SfWBNm7q3yb7XJur_pPOC-_jAbdoU=",
     title: "Tic-Tac-Toe",
-    description:
-      "A two-player game where the goal is to alternately mark spaces on a 3x3 grid, aiming to align three marks in a row, column, or diagonal.",
     link: "https://game-app-tictactoe.netlify.app/",
+    category: "Game",
+    isReady: true,
   },
   {
     imageUrl:
       "https://play-lh.googleusercontent.com/mGZWYVjeRCqmoIIYerstJOWjE1JgcZ7ngDJ4sLvAuD32BvOd4b8cfn2EavL9Jia5H1I",
-    title: "Daily Order (Todos)",
-    description:
-      "Enhance your productivity by focusing on what truly matters. Simplify your shopping, task management, and note-taking with ease.",
+    title: "Daily Order",
     link: "https://dailyorder.netlify.app/",
+    category: "Management",
+    isReady: true,
   },
   {
     imageUrl:
-      "https://st4.depositphotos.com/24409500/25635/i/450/depositphotos_256359544-stock-photo-saint-petersburg-russia-april-6.jpg",
-    title: "Star Wars",
-    description: "Movie characters and with their individual discription",
+      "https://assets.isu.pub/document-structure/230111204101-6aebb8bebfa4befa4a1665901a8c500d/v1/574b1cda9f152ea6756be6b12eb0e3a3.jpeg",
+    title: "Movie",
     link: "/",
+    category: "Entertainment",
+    isReady: false,
   },
   {
     imageUrl:
-      "https://embed-ssl.wistia.com/deliveries/892ad6326a677713f5242156d44a0c95489287f3.webp?image_crop_resized=960x780",
-    title: "Reward your teachers app",
-    description:
-      "An impactful application that facilitates the expression of gratitude from former students to their influential teachers through monetary rewards. ",
-    link: "/",
+      "https://freerangestock.com/sample/118474/game-pad-vector-icon.jpg",
+    title: "country-match",
+    link: "https://capital-match.netlify.app/",
+    category: "Game",
+    isReady: true,
   },
   {
     imageUrl:
-      "https://assets-global.website-files.com/5e38f1a8e654dab96f303972/624ef2cb8f89985d78076a56_Portada.png",
-    title: "Chat box",
-    description: "A chatting app",
+      "https://images.pexels.com/photos/5868241/pexels-photo-5868241.jpeg",
+    title:
+      "This is a QRCode reusme generator app, I just put it under e-commerce category",
     link: "/",
+    category: "E-commerce",
+    isReady: false,
   },
 ];
 
 export const Projects = () => {
+  const [selectedCategory, setSeletedCategory] = useState<string>("All");
+  const [projectsData, setProjectsData] = useState<Project[]>(data);
+
+  const handleCategoryChange = (category: string) => {
+    setSeletedCategory(category);
+  };
+
+  useEffect(() => {
+    setProjectsData([]);
+    const id = setTimeout(() => {
+      const filteredProjects =
+        selectedCategory === "All"
+          ? data
+          : data.filter((project) => project.category === selectedCategory);
+      setProjectsData(filteredProjects);
+    }, 10);
+
+    return () => {
+      clearTimeout(id);
+    };
+  }, [selectedCategory]);
+
+  const selected = (tag: string): React.CSSProperties => {
+    return {
+      backgroundColor: tag === selectedCategory ? "purple" : "",
+      color: tag === selectedCategory ? "#fff" : "",
+    };
+  };
+
   return (
     <>
-      <div className={styles.parent} id={"projects"}>
-        <div className={styles.title}>PROJECTS</div>
+      <div className={styles.projects_container} id={"projects"}>
+        <p>Portfolio</p>
+        <h1>I Love What I Do</h1>
+        <ul className={styles.navbar}>
+          <li>
+            <button
+              onClick={() => handleCategoryChange("All")}
+              style={selected("All")}
+            >
+              All PROJECTS
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => handleCategoryChange("E-commerce")}
+              style={selected("E-commerce")}
+            >
+              E-COMMERCE
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => handleCategoryChange("Game")}
+              style={selected("Game")}
+            >
+              GAME
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={() => handleCategoryChange("Management")}
+              style={selected("Management")}
+            >
+              TASK MANAGEMENT
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => handleCategoryChange("Entertainment")}
+              style={selected("Entertainment")}
+            >
+              ENTERTAINMENT
+            </button>
+          </li>
+        </ul>
+
         <div className={styles.wrapper}>
-          {data.map((item) => (
-            <ChildrenProjects
-              key={item.title}
-              image={<img src={item.imageUrl} alt={"images"} />}
-              title={item.title}
-              description={item.description}
-              link={item.link}
-            />
+          {projectsData.map((project) => (
+            <FadeInText delay={500}>
+              <Card data={project} />
+            </FadeInText>
           ))}
         </div>
       </div>

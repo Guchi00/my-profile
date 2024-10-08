@@ -1,5 +1,4 @@
 .home_page {
-  /* background-color: rgb(226, 230, 230); */
   background-color: rgb(249, 249, 249);
   display: flex;
   justify-content: flex-start;
@@ -7,7 +6,34 @@
 }
 
 .main_wrapper {
-  margin-left: 200px;
+  margin-left: 250px;
+
+  position: relative;
+  background-color: white;
+  z-index: 200;
+
+  > div {
+    position: relative;
+    background-color: white;
+    z-index: 200;
+  }
+}
+
+.scroll_to_top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgb(185, 124, 204);
+  color: white;
+  padding: 7px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+
+  svg {
+    height: 17px;
+    width: 25px;
+  }
 }
 
 @media only screen and (max-width: 912px) {

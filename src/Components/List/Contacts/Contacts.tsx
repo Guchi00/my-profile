@@ -1,72 +1,98 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button, Popover } from "antd";
-import EmailIcon from "@mui/icons-material/Email";
+import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import XIcon from "@mui/icons-material/X";
-import InstagramIcon from "@mui/icons-material/Instagram";
+import EmailIcon from "@mui/icons-material/Email";
 import styles from "./styles.module.css";
+import FadeInText from "../../FadeInText";
+import { Modal } from "antd";
 
 export const Contacts = () => {
+  const [showModal, setShowModal] = useState<boolean>(false);
+
+  const handleShowModal = () => {
+    setShowModal(!showModal);
+  };
+
+  const handleCancel = () => {
+    setShowModal(!showModal);
+  };
+
+  const handleOk = () => {
+    setShowModal(!showModal);
+  };
+
   return (
     <>
       <div className={styles.container} id={"contacts"}>
-        <div className={styles.title_contacts}>CONTACTS</div>
+        <h1>Contact Me</h1>
+        <p>
+          feel free to drop me a message. <br></br>You can contact me via email
+          or connect with me on LinkedIn.
+        </p>
 
-        <div className={styles.contact_container_first}>
-          <Popover content="Email Ugochi">
-            <Button type="primary" className={styles.button}>
-              <EmailIcon className={styles.icon} />
-            </Button>
-          </Popover>
+        <div className={styles.form_container}>
+          <form className={styles.form}>
+            <input placeholder="Your Name" />
+            <input placeholder="Your Email" />
+            <input placeholder="Your Phone" />
+          </form>
 
-          <Link
-            to="mailto:iwuchukwuugochij@gmail.com"
-            className={styles.action_link}
-          >
-            iwuchukwuugochij@gmail.com
-          </Link>
+          <textarea placeholder="Your Message" />
         </div>
 
-        <div className={styles.contact_container}>
-          <Popover content="Message Ugochi on Linkedln">
-            <Button type="primary" className={styles.button}>
-              <LinkedInIcon className={styles.icon} />
-            </Button>
-          </Popover>
-          <Link
-            to="https://www.linkedin.com/in/judith-iwuchukwu/"
-            target="_blank"
-            className={styles.action_link}
-          >
-            Ugochi Iwuchukwu
-          </Link>
-        </div>
+        <button onClick={handleShowModal}>Submit Form</button>
 
-        <div className={styles.contact_container}>
-          <Popover content="Message Ugochi on Twitter">
-            <Button type="primary" className={styles.button}>
-              <XIcon className={styles.icon} />
-            </Button>
-          </Popover>
-          <Link to="" className={styles.action_link}>
-            ugochicodes
-          </Link>
-        </div>
+        <Modal
+          open={showModal}
+          onCancel={handleCancel}
+          onOk={handleOk}
+          footer={false}
+          closeIcon={false}
+        >
+          <p style={{ color: " rgb(117, 117, 117)" }}>
+            Form is currently unavailable. <br></br> Kindly click on the
+            LinkedIn icon below to send me an instant message via LinkedIn or
+            send me an Email. Thank You!
+          </p>
+          <button onClick={handleOk} className={styles.modal_btn}>
+            OK
+          </button>
+        </Modal>
 
-        <div className={styles.contact_container}>
-          <Popover content="Message Ugochi on Instagram">
-            <Button type="primary" className={styles.button}>
-              <InstagramIcon className={styles.icon} />
-            </Button>
-          </Popover>
-          <Link
-            to="https://www.instagram.com/ugochicodes?igsh=cHdsa3l5b2kzMG5q&utm_source=qr"
-            className={styles.action_link}
-          >
-            ugochicodes
-          </Link>
+        <div className={styles.contacts}>
+          <FadeInText delay={700}>
+            <div>
+              <PhoneIphoneIcon />
+              <span>Call Me</span>
+              <p>(420) 734 615 577</p>
+            </div>
+          </FadeInText>
+
+          <FadeInText delay={700}>
+            <Link
+              to="https://www.linkedin.com/in/judith-iwuchukwu/"
+              target="blank"
+            >
+              <LinkedInIcon />
+              <span>Send Message</span>
+              <p>Ugochi Iwuchukwu</p>
+            </Link>
+          </FadeInText>
+
+          <FadeInText delay={700}>
+            <a href="mailto:iwuchukwuugochij@gmail.com">
+              <div>
+                <EmailIcon />
+                <span>Email Me</span>
+                <p>iwuchukwu.ugochij@gmail.com</p>
+              </div>
+            </a>
+          </FadeInText>
         </div>
+      </div>
+      <div className={styles.footer}>
+        <p>© Copyright 2024 Ugochi Iwuchukwu - All Right Reserved</p>
       </div>
     </>
   );

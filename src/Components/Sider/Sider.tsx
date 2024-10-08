@@ -1,26 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import type { MenuProps } from "antd";
-import { Layout, Menu } from "antd";
-// import { Link } from "react-router-dom";
+import { Layout, Menu, theme } from "antd";
 import { Link, Events, scrollSpy } from "react-scroll";
-import PersonIcon from "@mui/icons-material/Person";
-import MovingIcon from "@mui/icons-material/Moving";
-import DeveloperBoardIcon from "@mui/icons-material/DeveloperBoard";
-import BarChartIcon from "@mui/icons-material/BarChart";
-import SchoolIcon from "@mui/icons-material/School";
-import EmailIcon from "@mui/icons-material/Email";
-import InterestsIcon from "@mui/icons-material/Interests";
-import FileCopyIcon from "@mui/icons-material/FileCopy";
 import styles from "./styles.module.css";
+import { Socials } from "./Socials";
 
 const { Sider } = Layout;
 
 export const SiderMenu: React.FC = () => {
-  // const [activeLink, setActiveLink] = useState("1");
-
-  // const {
-  //   token: { colorBgContainer, borderRadiusLG },
-  // } = theme.useToken();
+  const [activeLink, setActiveLink] = useState("1");
 
   const handleSetInactive = (key: number) => {
     console.log(key, "in active");
@@ -30,40 +18,37 @@ export const SiderMenu: React.FC = () => {
   const items: MenuProps["items"] = [
     {
       key: 1,
-      icon: <PersonIcon className={styles.person_icon} />,
       label: (
         <Link
-          // ref={(el: any) => (linksRef.current[0] = el)}
-          to={"about"}
+          to={"home"}
           className={styles.list_link}
           spy={true}
           smooth={true}
           activeClass="active_menu_link"
           onSetInactive={() => handleSetInactive(1)}
         >
+          Home
+        </Link>
+      ),
+    },
+
+    {
+      key: 2,
+      label: (
+        <Link
+          to={"about"}
+          className={styles.list_link}
+          spy={true}
+          smooth={true}
+          activeClass="active_menu_link"
+          // onSetInactive={() => handleSetInactive(1)}
+        >
           About
         </Link>
       ),
     },
     {
-      key: 2,
-      icon: <MovingIcon className={styles.experience_icon} />,
-      label: (
-        <Link
-          to={"experience"}
-          className={styles.list_link}
-          spy={true}
-          smooth={true}
-          activeClass="active_menu_link"
-          hashSpy={true}
-        >
-          Experience
-        </Link>
-      ),
-    },
-    {
-      key: 3,
-      icon: <DeveloperBoardIcon className={styles.project_icon} />,
+      key: 4,
       label: (
         <Link
           to={"projects"}
@@ -73,58 +58,25 @@ export const SiderMenu: React.FC = () => {
           activeClass="active_menu_link"
           hashSpy={true}
         >
-          Projects
+          Portfolio
         </Link>
       ),
     },
     {
-      key: 4,
-      icon: <BarChartIcon className={styles.skill_icon} />,
-      label: (
-        <Link
-          to={"skills"}
-          className={styles.list_link}
-          spy={true}
-          smooth={true}
-          activeClass="active_menu_link"
-          hashSpy={true}
-        >
-          Skills
-        </Link>
-      ),
-    },
-    {
-      key: 5,
-      icon: <SchoolIcon className={styles.education_icon} />,
-      label: (
-        <Link
-          to={"education"}
-          className={styles.list_link}
-          spy={true}
-          smooth={true}
-          activeClass="active_menu_link"
-          hashSpy={true}
-        >
-          Education
-        </Link>
-      ),
-    },
-    {
-      key: 6,
-      icon: <InterestsIcon className={styles.interest_icon} />,
+      key: 7,
       label: (
         <a
           href={"https://www.savethechildren.net/"}
+          target="blank"
           rel="noopener"
-          className={styles.list_link}
+          className={styles.list_link_interest}
         >
           Interest
         </a>
       ),
     },
     {
-      key: 7,
-      icon: <EmailIcon className={styles.contact_icon} />,
+      key: 8,
       label: (
         <Link
           to={"contacts"}
@@ -136,19 +88,6 @@ export const SiderMenu: React.FC = () => {
         >
           Contacts
         </Link>
-      ),
-    },
-    {
-      key: 8,
-      icon: <FileCopyIcon className={styles.resume_icon} />,
-      label: (
-        <a
-          href="https://www.canva.com/design/DAFtNLRdW8g/RUGm-vOvx6jdMIuaqbmjNw/edit?utm_content=DAFtNLRdW8g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-          rel="noopener"
-          className={styles.list_link}
-        >
-          Resume
-        </a>
       ),
     },
   ];
@@ -176,27 +115,24 @@ export const SiderMenu: React.FC = () => {
 
   return (
     <Sider className={styles.sider_parent}>
-      <Link
-        to="home"
-        className={styles.title}
-        spy={true}
-        smooth={true}
-        activeClass="active_menu_link"
-        hashSpy={true}
-      >
-        <h2>
-          Ugochi <br></br>Iwuchukwu <br></br>
-          <span id={styles.profession}>Frontend Engineer</span>
-        </h2>
-      </Link>
-      <Menu
-        theme="dark"
-        mode="inline"
-        // defaultSelectedKeys={["1"]}
-        // selectedKeys={[activeLink]}
-        items={items}
-        className={styles.menu}
-      />
+      <div className={styles.sider_content}>
+        <div>
+          <Link
+            to="home"
+            className={styles.title}
+            spy={true}
+            smooth={true}
+            activeClass="active_menu_link"
+            hashSpy={true}
+          >
+            <h1>Ugochi.</h1>
+          </Link>
+
+          <Menu theme="light" mode="inline" items={items} />
+        </div>
+
+        <Socials />
+      </div>
     </Sider>
   );
 };

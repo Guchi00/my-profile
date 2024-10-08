@@ -1,16 +1,19 @@
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./Page";
+import { Profile } from "./Page";
+import { NotFound } from "./Components/List/Projects/NotFound";
+import { ConfigProvider } from "antd";
 import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<>404</>} />
-      </Routes>
-    </BrowserRouter>
+    <ConfigProvider wave={{ disabled: true }}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Profile />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </ConfigProvider>
   );
 }
 

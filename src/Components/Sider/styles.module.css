@@ -1,35 +1,44 @@
 .sider_parent {
-  /* overflow: auto; */
   overflow-x: hidden;
   height: 100vh;
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
-  background-color: rgb(0, 21, 42);
+  background-color: #f5edf7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between !important;
+  width: 250px !important;
+  min-width: 250px !important;
+  max-width: 250px !important;
+
+  h1 {
+    color: rgb(31, 31, 31);
+    font-weight: 100;
+    cursor: pointer;
+  }
 }
 
-@media only screen and (max-width: 912px) {
-  .sider_parent {
-    display: none;
-  }
+.sider_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 .title {
   height: 150px;
   width: 100%;
-  color: rgb(240, 136, 6);
-  background-color: rgb(0, 21, 42);
+  color: rgb(53, 64, 78);
+  background-color: #f5edf7;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-decoration: none;
   font-size: 16px;
-  border: solid 0.5px rgb(221, 221, 221) !important;
-  border-top: 0px !important;
-  border-left: 0px !important;
-  border-right: 0px !important;
 }
 
 #profession {
@@ -39,53 +48,79 @@
 }
 
 .list_link {
-  font-size: 15px;
-  font-weight: 300;
-  /* border: solid 1px; */
-  /* margin-right: 20px; */
+  font-family: "Nunito", Helvetica, Arial, sans-serif !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7em;
+  transition: all 0.3s ease !important;
+  padding: 10px 20px !important;
+  cursor: pointer !important;
 }
 
-.person_icon {
-  font-size: 30px !important;
-  color: rgb(240, 136, 6) !important;
+.list_link:hover {
+  color: purple !important;
+  font-weight: 600;
 }
 
-.experience_icon {
-  font-size: 30px !important;
-  color: rgb(5, 188, 212) !important;
+.list_link_interest {
+  color: rgb(31, 31, 31) !important;
+  font-family: "Nunito", Helvetica, Arial, sans-serif !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7em;
 }
 
-.project_icon {
-  font-size: 30px !important;
-  color: rgb(63, 81, 181) !important;
+.list_link_interest:focus {
+  color: purple !important;
+  font-weight: 600;
 }
 
-.skill_icon {
-  font-size: 30px !important;
-  color: rgb(157, 39, 176) !important;
+.list_link_interest:hover {
+  color: purple !important;
+  font-weight: 600;
 }
 
-.education_icon {
-  font-size: 30px !important;
-  color: rgb(0, 128, 115) !important;
+.socials {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  a {
+    height: 29px;
+    width: 29px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: purple;
+    cursor: pointer;
+    margin: 7px;
+    transition: transform 0.3s ease;
+
+    svg {
+      font-size: 16px;
+      color: white;
+    }
+  }
+  a:hover {
+    transform: scale(1.3); /* Makes the icon slightly larger */
+  }
 }
 
-.interest_icon {
-  font-size: 30px !important;
-  color: #f44436 !important;
+@media only screen and (max-width: 912px) {
+  .sider_parent {
+    display: none;
+  }
 }
 
-.contact_icon {
-  font-size: 30px !important;
-  color: rgb(121, 85, 72) !important;
-}
+@media only screen and (max-width: 390px) {
+  .socials a {
+    height: 27px;
+    width: 27px;
+  }
 
-.resume_icon {
-  font-size: 30px !important;
-  color: rgb(251, 192, 44) !important;
-}
-
-.items {
-  border-radius: 0px !important;
-  border: solid 1px;
+  .socials svg {
+    font-size: 14px !important;
+  }
 }
