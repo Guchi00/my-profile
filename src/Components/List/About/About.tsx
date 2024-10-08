@@ -74,65 +74,62 @@ export const About = () => {
             <div className={styles.skills_section}>
               <div className={styles.skills}>
                 <div>
-                  <img src="react.png" alt="react image" />
+                  <img src="react.png" alt="reactjs" />
                   <label>React</label>
                 </div>
 
                 <div>
-                  <img src="ts_image.png" alt="typecript image" />
+                  <img src="ts_image.png" alt="typecript" />
                   <label>Typescript</label>
                 </div>
 
                 <div>
-                  <img src="javascript.png" alt="javascript image" />
+                  <img src="javascript.png" alt="javascript" />
                   <label>Javascript</label>
                 </div>
 
                 <div>
-                  <img src="nextjs.jpg" alt="next image" />
+                  <img src="nextjs.jpg" alt="nextjs" />
                   <label>Nextjs</label>
                 </div>
 
                 <div>
-                  <img src="html5.png" alt="html image" />
+                  <img src="html5.png" alt="html" />
                   <label>HTML5</label>
                 </div>
 
                 <div>
-                  <img src="css3.png" alt="css image" />
+                  <img src="css3.png" alt="css" />
                   <label>CSS3</label>
                 </div>
 
                 <div>
-                  <img src="tailwind_css.png" alt="Tailwind CSS image" />
+                  <img src="tailwind_css.png" alt="Tailwind CSS" />
                   <label>Tailwind CSS</label>
                 </div>
 
                 <div>
-                  <img
-                    src="styled-com_image.jpeg"
-                    alt="Styled component image"
-                  />
+                  <img src="styled-com_image.jpeg" alt="Styled component" />
                   <label>Styled Component</label>
                 </div>
 
                 <div>
-                  <img src="nodejs.png" alt="nodejs image" />
+                  <img src="nodejs.png" alt="nodejs" />
                   <label>Nodejs</label>
                 </div>
 
                 <div>
-                  <img src="docker.webp" alt="docker image" />
+                  <img src="docker.webp" alt="docker" />
                   <label>Docker</label>
                 </div>
 
                 <div>
-                  <img src="cloud.webp" alt="AWS image" />
+                  <img src="cloud.webp" alt="AWS" />
                   <label>AWS</label>
                 </div>
 
                 <div>
-                  <img src="github.png" alt="Github image" />
+                  <img src="github.png" alt="Github" />
                   <label>Git</label>
                 </div>
               </div>

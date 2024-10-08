@@ -23,7 +23,7 @@ export const Card = (props: ProjectProps) => {
       </div>
 
       {data.isReady && (
-        <a href={data.link} rel="noopener" target="_blank">
+        <a href={data.link} target="_blank" rel="noopener noreferrer">
           <div className={styles.overlay}>
             <span className={styles.view_text}>View Project</span>
           </div>

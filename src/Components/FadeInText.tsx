@@ -10,6 +10,8 @@ const FadeInText: React.FC<FadeInTextProps> = ({ children, delay = 0 }) => {
   const textRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    const element = textRef.current; // Store the reference to avoid issues
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -20,13 +22,13 @@ const FadeInText: React.FC<FadeInTextProps> = ({ children, delay = 0 }) => {
       });
     });
 
-    if (textRef.current) {
-      observer.observe(textRef.current);
+    if (element) {
+      observer.observe(element);
     }
 
     return () => {
-      if (textRef.current) {
-        observer.unobserve(textRef.current);
+      if (element) {
+        observer.unobserve(element);
       }
     };
   }, [delay]);

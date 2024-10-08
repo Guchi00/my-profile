@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import type { MenuProps } from "antd";
-import { Layout, Menu, theme } from "antd";
+import { Layout, Menu } from "antd";
 import { Link, Events, scrollSpy } from "react-scroll";
 import styles from "./styles.module.css";
 import { Socials } from "./Socials";
@@ -8,8 +8,6 @@ import { Socials } from "./Socials";
 const { Sider } = Layout;
 
 export const SiderMenu: React.FC = () => {
-  const [activeLink, setActiveLink] = useState("1");
-
   const handleSetInactive = (key: number) => {
     console.log(key, "in active");
     // setActiveLink("9");

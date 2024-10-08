@@ -84,9 +84,9 @@ export const Profile = () => {
       </div>
 
       {showButton && (
-        <a href="" onClick={scrollToTop} className={styles.scroll_to_top}>
+        <button onClick={scrollToTop} className={styles.scroll_to_top}>
           <StraightIcon />
-        </a>
+        </button>
       )}
     </>
   );
