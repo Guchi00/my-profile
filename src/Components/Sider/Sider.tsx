@@ -45,7 +45,7 @@ export const SiderMenu: React.FC = () => {
       ),
     },
     {
-      key: 4,
+      key: 3,
       label: (
         <Link
           to={"projects"}
@@ -60,20 +60,7 @@ export const SiderMenu: React.FC = () => {
       ),
     },
     {
-      key: 7,
-      label: (
-        <a
-          href={"https://www.savethechildren.net/"}
-          target="blank"
-          rel="noopener"
-          className={styles.list_link_interest}
-        >
-          Interest
-        </a>
-      ),
-    },
-    {
-      key: 8,
+      key: 4,
       label: (
         <Link
           to={"contacts"}

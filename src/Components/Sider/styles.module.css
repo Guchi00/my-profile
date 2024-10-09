@@ -62,24 +62,6 @@
   font-weight: 600;
 }
 
-.list_link_interest {
-  color: rgb(31, 31, 31) !important;
-  font-family: "Nunito", Helvetica, Arial, sans-serif !important;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.7em;
-}
-
-.list_link_interest:focus {
-  color: purple !important;
-  font-weight: 600;
-}
-
-.list_link_interest:hover {
-  color: purple !important;
-  font-weight: 600;
-}
-
 .socials {
   display: flex;
   align-items: flex-end;

@@ -57,7 +57,7 @@ export const About = () => {
               <button onClick={handleShowSkills}>
                 {showSkills ? "Close" : "Show My Skills"}
               </button>
-              <a href="/Ugochi.pdf" download="Ugochi_Resume.pdf">
+              <a href="/Ugochi.pdf" download="Ugochi Iwuchukwu Resume.pdf">
                 <button style={{ marginLeft: "30px" }}>Download Resume</button>
               </a>
             </FadeInText>

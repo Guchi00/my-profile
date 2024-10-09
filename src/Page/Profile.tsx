@@ -69,6 +69,7 @@ export const Profile = () => {
           <div id="about">
             <About />
           </div>
+
           <div id="projects">
             <Projects />
           </div>
