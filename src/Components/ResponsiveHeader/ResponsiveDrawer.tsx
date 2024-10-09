@@ -64,12 +64,6 @@ export const ResponsiveDrawer: React.FC = () => {
             </div>
 
             <div>
-              <a href={"#interest"} className={styles.drawer_text_link}>
-                Interest
-              </a>
-            </div>
-
-            <div>
               <a href={"#contacts"} className={styles.drawer_text_link}>
                 Contact
               </a>
