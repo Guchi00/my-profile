@@ -16,7 +16,7 @@ const data: Project[] = [
     imageUrl:
       "https://unblast.com/wp-content/uploads/2019/12/eCommerce-Mobile-App-Template-1.jpg",
     title: "Amazon-Clone",
-    link: "https://e-commercesiteamazoneclone.netlify.app/",
+    link: "https://e-commercewebsitte.netlify.app/",
     category: "E-commerce",
     isReady: true,
   },
