@@ -48,8 +48,7 @@ export const About = () => {
                 for new challenges. I pride myself on working well with teams,
                 ensuring seamless integration and optimal performance across all
                 my projects. When I’m not knee-deep in code, you’ll catch me
-                watching movies with my husband—snuggled up and loving every
-                minute!
+                watching movies, snuggled up and loving every minute!
               </p>
             </FadeInText>
 
